@@ -7,7 +7,7 @@ __file_extension_selection = ['.bmp']
 def _classes_encoder(root_dir):
     classes_from_folder = {}
     classes = os.listdir(root_dir)
-    with open('classes_ont_hot.txt', 'w')  as f:
+    with open(os.path.join(root_dir, 'classes_ont_hot.txt'), 'w')  as f:
         for index, class_name in enumerate(classes):
             classes_from_folder[class_name] = index
             out_string = class_name + ' ' + str(index) + '\n'
